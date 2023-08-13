@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import confetti from "https://esm.run/canvas-confetti@1";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    function onClick() {
+        confetti({
+            particleCount: 150,
+            spread: 60,
+        });
+    }
+
+    return (
+        <div>
+            <button className="button" onClick={onClick}>
+                <span>🎉</span>
+                <span>Like</span>
+            </button>
+        </div>
+    );
 }
 
 export default App;
