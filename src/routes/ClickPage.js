@@ -1,8 +1,8 @@
+import React, { useState } from "react";
 import confetti from "https://esm.run/canvas-confetti@1";
-import styles from "./App.module.css";
-import { useState } from "react";
+import styles from "css/ClickPage.module.css";
 
-function App() {
+const ClickPage = () => {
     let [count, setCount] = useState(0);
     function onClick() {
         setCount(count + 1);
@@ -21,6 +21,6 @@ function App() {
             <div>{count}번의 축하를 받았습니다!</div>
         </div>
     );
-}
+};
 
-export default App;
+export default ClickPage;
