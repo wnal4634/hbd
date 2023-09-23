@@ -1,28 +1,18 @@
 import React, { useState } from "react";
-import { HashRouter as Router, Route } from "react-router-dom";
-import { Switch } from "react-router-dom/cjs/react-router-dom.min";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import Create from "routes/Create";
 import ClickPage from "routes/ClickPage";
-import Create from "components/Create";
 
 const AppRouter = () => {
-    const [isCreatedName, setIsCreatedName] = useState(false);
-
     return (
         <Router>
             <Switch>
-                {isCreatedName ? (
-                    <>
-                        <Route exact path="/">
-                            <ClickPage />
-                        </Route>
-                    </>
-                ) : (
-                    <>
-                        <Route exact path="/">
-                            <Create />
-                        </Route>
-                    </>
-                )}
+                {/* <Route path="/user/:id">
+                <ClickPage />
+            </Route> */}
+                <Route path="/">
+                    <Create />
+                </Route>
             </Switch>
         </Router>
     );
